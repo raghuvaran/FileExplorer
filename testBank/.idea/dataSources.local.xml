@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails untitled: test" uuid="1179360d-5c75-4a41-ad9c-43b07b55d4c2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>expertWork_gkp6</user-name>
+      <user-password>dfc1dfc0dfcbdfd9dfcedfccdfc2df92df93df98df8cdf80dff4dfcbdfccdfe0dfc1dfc0</user-password>
+    </data-source>
+    <data-source name="Rails untitled: development" uuid="273e9671-753b-43ee-8d22-c916b1032464">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>expertWork_gkp6</user-name>
+      <user-password>dfc1dfc0dfcbdfd9dfcedfccdfc2df92df93df98df8cdf80dff4dfcbdfccdfe0dfc1dfc0</user-password>
+    </data-source>
+    <data-source name="Rails untitled: production" uuid="8c45276e-91d6-4e17-87d8-473d9c7ddfce">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>expertWork_test</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe7dff3dff9dffbdfe6dfebdffadffadff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>

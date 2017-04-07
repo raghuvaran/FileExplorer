@@ -1,0 +1,3 @@
+class DownFile < ApplicationRecord
+
+end

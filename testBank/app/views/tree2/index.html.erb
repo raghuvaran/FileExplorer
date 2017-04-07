@@ -1,0 +1,23 @@
+<h1>Tree2#index</h1>
+<p><%= link_to "Go home ..", tree2_url %> <b>Current Dir: </b> <%= @dir.to_s %></p>
+
+
+<% if @dir_hash.length > 0 %>
+    <h2>Directories:</h2>
+<% end %>
+
+<ul>
+  <% @dir_hash.each do |key,value| %>
+      <li><%= link_to key, tree2_index_path(dir: value) %></li>
+<% end %>
+</ul>
+
+
+<% if @file_hash.length > 0 %>
+    <h2>Files:</h2>
+<% end %>
+<ul>
+  <% @file_hash.each do |key,value| %>
+      <li><%= link_to key, tree2_download_path(path: value, fil:key) %></li>
+  <% end %>
+</ul>
