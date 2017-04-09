@@ -1,7 +1,7 @@
 class Tree2Controller < ApplicationController
   def index
-    # Default assign Rails root directory
-    @dir = (Rails.root).to_s
+    # Default assign Rails public directory
+    @dir = (Rails.root).to_s + '/public'
     root_path = Pathname.new(Rails.root)
 
     # If :dir is sent (not blank) get required directory into @dir
