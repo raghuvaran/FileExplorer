@@ -1,24 +1,19 @@
-# README
+# File Explorer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple filesystem navigator
 
-Things you may want to cover:
+Built to track file (previous year tests) download analytics from College of Engineering's test bank file server.
 
-* Ruby version
+Hosted on Heroku at [FileExplorer](http://testbank.raghuvaran.me)
 
-* System dependencies
+About Project:
 
-* Configuration
+* Renders list of files and directories in any accessible drive/folder
 
-* Database creation
+* Configurable to track directory navigation, file downloads
 
-* Database initialization
+* Good control over downloadable files
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Files are rendered using <i>send_file</i> not by puma/phusion passenger
 
 * ...
