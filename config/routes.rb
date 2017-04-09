@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'tree2#index'
+
   get 'tree2' => 'tree2#index'
 
   get 'tree2/index'
