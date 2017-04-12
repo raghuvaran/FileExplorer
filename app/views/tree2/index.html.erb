@@ -8,7 +8,7 @@
 		path = @dir.slice(1, @dir.length).split('/')
 		for i in 0..path.length-1
 	%>
-			<li><%= link_to path[i], path[0..i].join('/') %></li>
+			<li><%= link_to path[i], tree2_index_path(dir: path[0..i].join('/') ) %></li>
 	<%	end
 	%>
 	<li class="pull-right"><a href="https://tblogs.raghuvaran.me">View MySQL table</a></li>
