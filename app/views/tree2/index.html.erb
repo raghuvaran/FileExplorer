@@ -6,7 +6,8 @@
 	<li><%= link_to raw('<span class="glyphicon glyphicon-home" aria-hidden="true"></span>'), tree2_url %></li> 
 	<%
 		path = @dir.slice(1, @dir.length).split('/')
-		for i in 0..path.length-1
+		#Skipping first element; For some reason on heroku it shows /app as root directory where it is actually NOT!
+		for i in 1..path.length-1
 	%>
 			<li><%= link_to path[i], tree2_index_path(dir: path[0..i].join('/') ) %></li>
 	<%	end
