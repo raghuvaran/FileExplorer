@@ -24,7 +24,7 @@
 	    <li><h2 class="list-group-item active">Directories:</h2></li>
 	<% end %>
   	<% @dir_hash.each do |key,value| %>
-    	<li><%= link_to key+"/", tree2_index_path(dir: value), :class => "list-group-item" %></li>
+    	<li><%= link_to key, tree2_index_path(dir: value), :class => "list-group-item" %></li>
 	<% end %>
 </ul>
 
