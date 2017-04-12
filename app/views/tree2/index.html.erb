@@ -5,11 +5,11 @@
 <ol class="breadcrumb">
 	<li><%= link_to raw('<span class="glyphicon glyphicon-home" aria-hidden="true"></span>'), tree2_url %></li> 
 	<%
-		@dir.slice(1, @dir.length).split('/').each { |d| %>
-			<li><%= d %></li>
-	<%	}
-
-
+		path = @dir.slice(1, @dir.length).split('/')
+		for i in 0..path.length-1
+	%>
+			<li><%= link_to path[i], path[0..i].join('/') %></li>
+	<%	end
 	%>
 	<li class="pull-right"><a href="https://tblogs.raghuvaran.me">View MySQL table</a></li>
 </ol>
