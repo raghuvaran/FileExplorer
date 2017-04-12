@@ -1,28 +1,44 @@
-<h1>File Explorer</h1>
-<p><%= link_to "Go home ..", tree2_url %> <b>Current Dir: </b> <%= @dir.to_s %></p>
+  <div class="page-header">
+    <h1>File Explorer</h1>
+    </div>
 
-<p><a href="https://tblogs.raghuvaran.me">View logs </a>(from MySQL)</p>
+<ol class="breadcrumb">
+	<li><%= link_to "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>", tree2_url %></li> 
+	<%
+		@dir.slice(1, @dir.length).split('/').each { |d| %>
+			<li><%= d %></li>
+	<%	}
 
-<% if @dir_hash.length > 0 %>
-    <h2>Directories:</h2>
-<% end %>
 
-<ul>
-  <% @dir_hash.each do |key,value| %>
-      <li><%= link_to key, tree2_index_path(dir: value) %></li>
-<% end %>
+	%>
+	<li class="pull-right"><a href="https://tblogs.raghuvaran.me">View MySQL table</a></li>
+</ol>
+
+
+<div class="container">
+
+
+<ul class="list-group col-md-5">
+
+	<% if @dir_hash.length > 0 %>
+	    <li><h2 class="list-group-item active">Directories:</h2></li>
+	<% end %>
+  	<% @dir_hash.each do |key,value| %>
+    	<li><%= link_to key, tree2_index_path(dir: value), :class => "list-group-item" %></li>
+	<% end %>
 </ul>
 
 
-<% if @file_hash.length > 0 %>
-    <h2>Files:</h2>
-<% end %>
-<ul>
-  <% @file_hash.each do |key,value| %>
-      <li><%= link_to key, tree2_download_path(path: value, fil:key) %></li>
-  <% end %>
+<ul class="list-group col-md-offset-2 col-md-5">
+	<% if @file_hash.length > 0 %>
+	    <li><h2 class="list-group-item list-group-item-info">Files:</h2></li>
+	<% end %>
+  	<% @file_hash.each do |key,value| %>
+    	<li><%= link_to key, tree2_download_path(path: value, fil:key), :class => "list-group-item" %></li>
+  	<% end %>
 </ul>
 
+</div>
 
 
-<footer>&copy; <a href="https://raghuvaran.me">Raghuvaran Chowda</a></footer>
+
