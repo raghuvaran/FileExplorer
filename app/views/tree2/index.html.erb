@@ -3,7 +3,7 @@
     </div>
 
 <ol class="breadcrumb">
-	<li><%= link_to "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>", tree2_url %></li> 
+	<li><%= link_to "#", tree2_url do %><span class='glyphicon glyphicon-home' aria-hidden='true'></span> <% end %></li> 
 	<%
 		@dir.slice(1, @dir.length).split('/').each { |d| %>
 			<li><%= d %></li>
@@ -24,7 +24,7 @@
 	    <li><h2 class="list-group-item active">Directories:</h2></li>
 	<% end %>
   	<% @dir_hash.each do |key,value| %>
-    	<li><%= link_to key, tree2_index_path(dir: value), :class => "list-group-item" %></li>
+    	<li><%= link_to key+"/", tree2_index_path(dir: value), :class => "list-group-item" %></li>
 	<% end %>
 </ul>
 
