@@ -49,7 +49,7 @@ class Tree2Controller < ApplicationController
       send_file Rails.root.join(params[:path], params[:fil])#, x_sendfile: true
 
       # Update database
-      @down_file = DownFile.new(name:params[:fil], path:params[:path])
+      @down_file = DownFile.new(name:params[:fil], path:params[:path], request.remote_ip())
       @down_file.save
     end
   end

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20160927194752) do
   create_table "down_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "name"
     t.string   "path"
+    t.string   "ip_add"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
